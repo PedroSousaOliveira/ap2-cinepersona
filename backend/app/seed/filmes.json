@@ -1,0 +1,322 @@
+[
+  {
+    "titulo": "À Procura da Felicidade",
+    "ano": 2006,
+    "diretor": "Gabriele Muccino",
+    "genero": "Drama",
+    "lente_alvo": "ROTEIRO_DE_VIRADA",
+    "is_cult": false,
+    "sinopse": "Chris Gardner enfrenta dificuldades financeiras enquanto cria o filho e tenta conquistar uma vaga em um programa de treinamento de corretores.",
+    "motivo_reconhecimento": "A busca de Chris por estabilidade para si e para o filho transforma persistência diante de obstáculos em eixo da história."
+  },
+  {
+    "titulo": "Rocky: Um Lutador",
+    "ano": 1976,
+    "diretor": "John G. Avildsen",
+    "genero": "Drama esportivo",
+    "lente_alvo": "ROTEIRO_DE_VIRADA",
+    "is_cult": false,
+    "sinopse": "O boxeador da Filadélfia Rocky Balboa recebe a chance de enfrentar o campeão mundial Apollo Creed.",
+    "motivo_reconhecimento": "Rocky se prepara para uma luta improvável e encontra propósito ao provar a si mesmo que pode chegar até o fim."
+  },
+  {
+    "titulo": "Um Sonho de Liberdade",
+    "ano": 1994,
+    "diretor": "Frank Darabont",
+    "genero": "Drama",
+    "lente_alvo": "ROTEIRO_DE_VIRADA",
+    "is_cult": false,
+    "sinopse": "O banqueiro Andy Dufresne é condenado à prisão perpétua e constrói uma amizade com o detento Red ao longo dos anos.",
+    "motivo_reconhecimento": "A capacidade de Andy de preservar a esperança e criar oportunidades durante décadas de encarceramento sustenta a lente de recomeço."
+  },
+  {
+    "titulo": "Estrelas Além do Tempo",
+    "ano": 2016,
+    "diretor": "Theodore Melfi",
+    "genero": "Drama biográfico",
+    "lente_alvo": "ROTEIRO_DE_VIRADA",
+    "is_cult": false,
+    "sinopse": "Katherine Johnson, Dorothy Vaughan e Mary Jackson trabalham na NASA e contribuem para os primeiros voos espaciais tripulados dos Estados Unidos.",
+    "motivo_reconhecimento": "As três matemáticas enfrentam barreiras profissionais e mudam suas trajetórias ao demonstrar o valor de seu trabalho."
+  },
+  {
+    "titulo": "A Vida Secreta de Walter Mitty",
+    "ano": 2013,
+    "diretor": "Ben Stiller",
+    "genero": "Aventura",
+    "lente_alvo": "ROTEIRO_DE_VIRADA",
+    "is_cult": true,
+    "sinopse": "Walter Mitty, responsável pelos negativos de uma revista, viaja para encontrar uma fotografia desaparecida antes da publicação final.",
+    "motivo_reconhecimento": "A busca leva Walter a trocar fantasias recorrentes por decisões e experiências concretas fora de sua rotina."
+  },
+  {
+    "titulo": "Whiplash",
+    "ano": 2014,
+    "diretor": "Damien Chazelle",
+    "genero": "Drama musical",
+    "lente_alvo": "ROTEIRO_DE_VIRADA",
+    "is_cult": true,
+    "sinopse": "O baterista Andrew Neiman estuda em um conservatório e enfrenta a exigência extrema do maestro Terence Fletcher.",
+    "motivo_reconhecimento": "Andrew persegue a excelência musical sob pressão crescente, colocando ambição e custo pessoal em confronto direto."
+  },
+  {
+    "titulo": "Billy Elliot",
+    "ano": 2000,
+    "diretor": "Stephen Daldry",
+    "genero": "Drama",
+    "lente_alvo": "ROTEIRO_DE_VIRADA",
+    "is_cult": true,
+    "sinopse": "Em uma cidade mineradora inglesa, Billy descobre interesse pelo balé enquanto sua família espera que ele pratique boxe.",
+    "motivo_reconhecimento": "Billy insiste em seguir a dança apesar das expectativas familiares e sociais que tentam definir seu futuro."
+  },
+  {
+    "titulo": "Pequena Miss Sunshine",
+    "ano": 2006,
+    "diretor": "Jonathan Dayton e Valerie Faris",
+    "genero": "Comédia dramática",
+    "lente_alvo": "ROTEIRO_DE_VIRADA",
+    "is_cult": true,
+    "sinopse": "Uma família atravessa os Estados Unidos em uma Kombi para levar Olive a um concurso infantil de beleza.",
+    "motivo_reconhecimento": "A viagem obriga cada integrante a lidar com fracassos e apoiar Olive em sua tentativa de participar do concurso."
+  },
+  {
+    "titulo": "Questão de Tempo",
+    "ano": 2013,
+    "diretor": "Richard Curtis",
+    "genero": "Romance",
+    "lente_alvo": "PLANO_SEQUENCIA_AFETIVO",
+    "is_cult": false,
+    "sinopse": "Tim descobre que os homens de sua família podem viajar no tempo e usa essa habilidade para se aproximar de Mary.",
+    "motivo_reconhecimento": "A relação de Tim e Mary e sua vida familiar mostram como escolhas cotidianas constroem vínculos ao longo do tempo."
+  },
+  {
+    "titulo": "Divertida Mente",
+    "ano": 2015,
+    "diretor": "Pete Docter",
+    "genero": "Animação",
+    "lente_alvo": "PLANO_SEQUENCIA_AFETIVO",
+    "is_cult": false,
+    "sinopse": "Após se mudar para San Francisco, Riley tenta se adaptar enquanto Alegria, Tristeza e as outras emoções orientam suas reações.",
+    "motivo_reconhecimento": "A história liga a saudade da antiga vida de Riley à importância de reconhecer emoções e aceitar apoio da família."
+  },
+  {
+    "titulo": "Up: Altas Aventuras",
+    "ano": 2009,
+    "diretor": "Pete Docter",
+    "genero": "Animação",
+    "lente_alvo": "PLANO_SEQUENCIA_AFETIVO",
+    "is_cult": false,
+    "sinopse": "O viúvo Carl prende balões à casa para cumprir uma promessa feita à esposa e parte rumo à América do Sul com o jovem Russell.",
+    "motivo_reconhecimento": "A jornada de Carl começa como uma forma de honrar Ellie e abre espaço para um novo laço com Russell."
+  },
+  {
+    "titulo": "Coco",
+    "ano": 2017,
+    "diretor": "Lee Unkrich",
+    "genero": "Animação",
+    "lente_alvo": "PLANO_SEQUENCIA_AFETIVO",
+    "is_cult": false,
+    "sinopse": "Durante o Dia dos Mortos, Miguel chega à Terra dos Mortos enquanto tenta entender a história de sua família e de um músico que admira.",
+    "motivo_reconhecimento": "Miguel descobre como memória, música e reconciliação conectam gerações de sua família."
+  },
+  {
+    "titulo": "Brilho Eterno de uma Mente sem Lembranças",
+    "ano": 2004,
+    "diretor": "Michel Gondry",
+    "genero": "Drama romântico",
+    "lente_alvo": "PLANO_SEQUENCIA_AFETIVO",
+    "is_cult": true,
+    "sinopse": "Joel passa por um procedimento para apagar as lembranças de Clementine e revive momentos do relacionamento enquanto elas desaparecem.",
+    "motivo_reconhecimento": "As memórias compartilhadas levam Joel a confrontar o que ainda valoriza na relação, mesmo enquanto tenta esquecê-la."
+  },
+  {
+    "titulo": "Cinema Paradiso",
+    "ano": 1988,
+    "diretor": "Giuseppe Tornatore",
+    "genero": "Drama",
+    "lente_alvo": "PLANO_SEQUENCIA_AFETIVO",
+    "is_cult": true,
+    "sinopse": "Salvatore relembra a infância na Sicília e a amizade com Alfredo, projecionista do cinema local.",
+    "motivo_reconhecimento": "A lembrança de Alfredo e do cinema da infância mostra como uma amizade pode moldar toda uma vida."
+  },
+  {
+    "titulo": "O Fabuloso Destino de Amélie Poulain",
+    "ano": 2001,
+    "diretor": "Jean-Pierre Jeunet",
+    "genero": "Comédia romântica",
+    "lente_alvo": "PLANO_SEQUENCIA_AFETIVO",
+    "is_cult": true,
+    "sinopse": "Amélie, uma garçonete em Montmartre, passa a planejar pequenas ações para melhorar a vida das pessoas ao seu redor.",
+    "motivo_reconhecimento": "Os gestos discretos de Amélie criam conexões com desconhecidos e a ajudam a se aproximar de Nino."
+  },
+  {
+    "titulo": "Antes do Amanhecer",
+    "ano": 1995,
+    "diretor": "Richard Linklater",
+    "genero": "Romance",
+    "lente_alvo": "PLANO_SEQUENCIA_AFETIVO",
+    "is_cult": true,
+    "sinopse": "Jesse e Celine se conhecem em um trem e passam a noite conversando e caminhando por Viena antes de se separarem.",
+    "motivo_reconhecimento": "A intimidade surge das conversas e do tempo compartilhado por duas pessoas que sabem que sua despedida se aproxima."
+  },
+  {
+    "titulo": "A Origem",
+    "ano": 2010,
+    "diretor": "Christopher Nolan",
+    "genero": "Ficção científica",
+    "lente_alvo": "CORTE_SECO_ADRENALINA",
+    "is_cult": false,
+    "sinopse": "Dom Cobb lidera uma equipe que entra em sonhos para implantar uma ideia na mente de um herdeiro.",
+    "motivo_reconhecimento": "A missão depende de estratégia em sonhos encadeados, enquanto cada imprevisto ameaça o plano e a equipe."
+  },
+  {
+    "titulo": "O Lobo de Wall Street",
+    "ano": 2013,
+    "diretor": "Martin Scorsese",
+    "genero": "Drama biográfico",
+    "lente_alvo": "CORTE_SECO_ADRENALINA",
+    "is_cult": false,
+    "sinopse": "O corretor Jordan Belfort constrói uma firma de investimentos marcada por fraude e excessos em Wall Street.",
+    "motivo_reconhecimento": "A ascensão de Belfort depende de manipulação financeira e decisões calculadas que ampliam o risco de sua queda."
+  },
+  {
+    "titulo": "Seven: Os Sete Crimes Capitais",
+    "ano": 1995,
+    "diretor": "David Fincher",
+    "genero": "Suspense",
+    "lente_alvo": "CORTE_SECO_ADRENALINA",
+    "is_cult": false,
+    "sinopse": "Dois detetives investigam uma série de assassinatos planejados em torno dos sete pecados capitais.",
+    "motivo_reconhecimento": "Cada cena do crime funciona como uma pista de um padrão, exigindo que os detetives interpretem a lógica do assassino."
+  },
+  {
+    "titulo": "Clube da Luta",
+    "ano": 1999,
+    "diretor": "David Fincher",
+    "genero": "Drama",
+    "lente_alvo": "CORTE_SECO_ADRENALINA",
+    "is_cult": false,
+    "sinopse": "Um narrador insone conhece Tyler Durden e funda com ele um clube clandestino de luta que cresce para além dos encontros originais.",
+    "motivo_reconhecimento": "A expansão do clube e a relação instável entre os protagonistas fazem a tensão crescer junto com as consequências de suas escolhas."
+  },
+  {
+    "titulo": "Parasita",
+    "ano": 2019,
+    "diretor": "Bong Joon-ho",
+    "genero": "Suspense",
+    "lente_alvo": "CORTE_SECO_ADRENALINA",
+    "is_cult": true,
+    "sinopse": "Integrantes da família Kim conseguem empregos na casa dos Park sem revelar que são parentes.",
+    "motivo_reconhecimento": "O plano dos Kim depende de identidades encobertas e se complica quando segredos da casa vêm à tona."
+  },
+  {
+    "titulo": "Ilha do Medo",
+    "ano": 2010,
+    "diretor": "Martin Scorsese",
+    "genero": "Suspense",
+    "lente_alvo": "CORTE_SECO_ADRENALINA",
+    "is_cult": true,
+    "sinopse": "O agente federal Teddy Daniels investiga o desaparecimento de uma paciente em um hospital psiquiátrico numa ilha.",
+    "motivo_reconhecimento": "Teddy precisa avaliar depoimentos e pistas contraditórias enquanto a investigação desafia sua leitura dos acontecimentos."
+  },
+  {
+    "titulo": "Oldboy",
+    "ano": 2003,
+    "diretor": "Park Chan-wook",
+    "genero": "Suspense",
+    "lente_alvo": "CORTE_SECO_ADRENALINA",
+    "is_cult": true,
+    "sinopse": "Após quinze anos de cativeiro sem explicação, Oh Dae-su é libertado e recebe um prazo para descobrir quem o prendeu.",
+    "motivo_reconhecimento": "A busca por respostas transforma cada pista sobre o cativeiro em parte de um jogo de estratégia e vingança."
+  },
+  {
+    "titulo": "Amnésia",
+    "ano": 2000,
+    "diretor": "Christopher Nolan",
+    "genero": "Suspense",
+    "lente_alvo": "CORTE_SECO_ADRENALINA",
+    "is_cult": true,
+    "sinopse": "Leonard, incapaz de formar novas memórias, investiga o assassinato da esposa usando anotações, fotografias e tatuagens.",
+    "motivo_reconhecimento": "Leonard precisa montar uma investigação com registros incompletos e avaliar a confiabilidade de cada pista."
+  },
+  {
+    "titulo": "Interestelar",
+    "ano": 2014,
+    "diretor": "Christopher Nolan",
+    "genero": "Ficção científica",
+    "lente_alvo": "FORA_DE_QUADRO",
+    "is_cult": false,
+    "sinopse": "Com a agricultura da Terra em crise, o piloto Cooper participa de uma missão que atravessa um buraco de minhoca em busca de um novo lar.",
+    "motivo_reconhecimento": "A missão combina exploração espacial com escolhas que questionam o que a humanidade está disposta a deixar para sobreviver."
+  },
+  {
+    "titulo": "O Show de Truman",
+    "ano": 1998,
+    "diretor": "Peter Weir",
+    "genero": "Comédia dramática",
+    "lente_alvo": "FORA_DE_QUADRO",
+    "is_cult": false,
+    "sinopse": "Truman Burbank começa a suspeitar que sua cidade e sua rotina fazem parte de um programa de televisão transmitido ao vivo.",
+    "motivo_reconhecimento": "A descoberta de Truman expõe como a mídia transforma sua vida em espetáculo e o leva a questionar a realidade que conhece."
+  },
+  {
+    "titulo": "Matrix",
+    "ano": 1999,
+    "diretor": "Lana e Lilly Wachowski",
+    "genero": "Ficção científica",
+    "lente_alvo": "FORA_DE_QUADRO",
+    "is_cult": false,
+    "sinopse": "O programador Neo descobre que a realidade cotidiana é uma simulação e se junta a um grupo de resistência.",
+    "motivo_reconhecimento": "A revelação de uma realidade simulada muda a forma como Neo entende liberdade, tecnologia e controle."
+  },
+  {
+    "titulo": "Corra!",
+    "ano": 2017,
+    "diretor": "Jordan Peele",
+    "genero": "Terror",
+    "lente_alvo": "FORA_DE_QUADRO",
+    "is_cult": false,
+    "sinopse": "Chris visita a família de sua namorada Rose e percebe comportamentos inquietantes durante o fim de semana.",
+    "motivo_reconhecimento": "O suspense usa a visita de Chris para expor o racismo sob uma aparência de cordialidade cotidiana."
+  },
+  {
+    "titulo": "A Viagem de Chihiro",
+    "ano": 2001,
+    "diretor": "Hayao Miyazaki",
+    "genero": "Animação",
+    "lente_alvo": "FORA_DE_QUADRO",
+    "is_cult": true,
+    "sinopse": "Chihiro entra no mundo dos espíritos e precisa trabalhar numa casa de banhos depois que seus pais são transformados em porcos.",
+    "motivo_reconhecimento": "O mundo dos espíritos obriga Chihiro a descobrir recursos próprios enquanto confronta ganância e esquecimento."
+  },
+  {
+    "titulo": "Tudo em Todo o Lugar ao Mesmo Tempo",
+    "ano": 2022,
+    "diretor": "Daniel Kwan e Daniel Scheinert",
+    "genero": "Ficção científica",
+    "lente_alvo": "FORA_DE_QUADRO",
+    "is_cult": true,
+    "sinopse": "A dona de lavanderia Evelyn é puxada para uma aventura entre universos paralelos enquanto enfrenta problemas familiares e fiscais.",
+    "motivo_reconhecimento": "A viagem por versões alternativas de sua vida transforma uma crise doméstica numa exploração de identidade e possibilidades."
+  },
+  {
+    "titulo": "Ela",
+    "ano": 2013,
+    "diretor": "Spike Jonze",
+    "genero": "Drama romântico",
+    "lente_alvo": "FORA_DE_QUADRO",
+    "is_cult": true,
+    "sinopse": "Theodore, um escritor solitário, desenvolve uma relação com Samantha, um sistema operacional dotado de inteligência artificial.",
+    "motivo_reconhecimento": "A relação de Theodore com uma inteligência artificial questiona como tecnologia e intimidade podem se misturar."
+  },
+  {
+    "titulo": "O Labirinto do Fauno",
+    "ano": 2006,
+    "diretor": "Guillermo del Toro",
+    "genero": "Fantasia",
+    "lente_alvo": "FORA_DE_QUADRO",
+    "is_cult": true,
+    "sinopse": "Na Espanha de 1944, Ofelia encontra um labirinto e recebe tarefas de uma criatura que afirma que ela pertence a um reino subterrâneo.",
+    "motivo_reconhecimento": "A fantasia de Ofelia contrapõe-se à violência do pós-guerra e oferece uma forma de questionar obediência e poder."
+  }
+]
