@@ -1,9 +1,14 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.P2" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<resources>
+    <style name="Base.Theme.CinePersona" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/cine_green</item>
+        <item name="colorOnPrimary">@color/cine_background</item>
+        <item name="colorSecondary">@color/cine_orange</item>
+        <item name="colorOnSecondary">@color/cine_background</item>
+        <item name="colorSurface">@color/cine_surface</item>
+        <item name="android:colorBackground">@color/cine_background</item>
+        <item name="android:statusBarColor">@color/cine_background</item>
+        <item name="android:navigationBarColor">@color/cine_background</item>
+        <item name="android:windowLightStatusBar">false</item>
     </style>
-
-    <style name="Theme.P2" parent="Base.Theme.P2" />
+    <style name="Theme.CinePersona" parent="Base.Theme.CinePersona" />
 </resources>

@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">p2</string>
+    <string name="app_name">CinePersona</string>
+    <string name="login_title">Entre no CinePersona</string>
+    <string name="questionario_title">Sua Sessão de Hoje</string>
+    <string name="recomendacoes_title">Sua recomendação</string>
+    <string name="detalhes_filme_title">Detalhes do filme</string>
+    <string name="perfil_diario_title">Meu diário</string>
+    <string name="lente_roteiro_de_virada">Roteiro de Virada</string>
+    <string name="lente_plano_sequencia_afetivo">Plano-Sequência Afetivo</string>
+    <string name="lente_corte_seco_adrenalina">Corte Seco &amp; Adrenalina</string>
+    <string name="lente_fora_de_quadro">Fora de Quadro</string>
 </resources>

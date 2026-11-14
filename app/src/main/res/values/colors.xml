@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="cine_background">#14181C</color>
+    <color name="cine_surface">#2C3440</color>
+    <color name="cine_green">#00E054</color>
+    <color name="cine_orange">#FF8000</color>
+    <color name="cine_text">#FFFFFFFF</color>
+    <color name="cine_text_secondary">#FFB8C0C8</color>
 </resources>

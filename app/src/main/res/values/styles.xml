@@ -1,0 +1,16 @@
+<resources>
+    <style name="Widget.CinePersona.Button" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/cine_green</item>
+        <item name="android:textColor">@color/cine_background</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+    <style name="Widget.CinePersona.EditText" parent="Widget.Material3.TextInputEditText.OutlinedBox">
+        <item name="android:textColor">@color/cine_text</item>
+        <item name="android:textColorHint">@color/cine_text_secondary</item>
+    </style>
+    <style name="Widget.CinePersona.Card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/cine_surface</item>
+        <item name="cardCornerRadius">@dimen/cine_card_corner</item>
+        <item name="cardElevation">@dimen/cine_card_elevation</item>
+    </style>
+</resources>
