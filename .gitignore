@@ -1,0 +1,25 @@
+# Android / Gradle
+.gradle/
+build/
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.iml
+.idea/
+
+# Backend
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+*.db
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/
