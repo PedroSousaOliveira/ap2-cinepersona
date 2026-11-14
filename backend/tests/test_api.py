@@ -42,8 +42,12 @@ def test_post_usuario_valida_nome_e_email(client):
 
 def test_get_filmes_busca_titulo_e_diretor_sem_diferenciar_caixa(client):
     por_titulo = client.get("/filmes", params={"q": "ORIGEM"})
+    por_titulo_acentuado = client.get("/filmes", params={"q": "AMÉLIE"})
     por_diretor = client.get("/filmes", params={"q": "NOLAN"})
     assert [filme["titulo"] for filme in por_titulo.json()] == ["A Origem"]
+    assert [filme["titulo"] for filme in por_titulo_acentuado.json()] == [
+        "O Fabuloso Destino de Amélie Poulain"
+    ]
     assert len(por_diretor.json()) == 3
 
 
@@ -59,14 +63,14 @@ def test_post_recomendar_grava_lente_e_devolve_catalogo(client):
             "modo_lado_b": False,
         },
     )
-    atualizado = client.get(f"/usuarios/{usuario['id']}/avaliacoes")
+    historico = client.get(f"/usuarios/{usuario['id']}/avaliacoes")
     assert resposta.status_code == 200
     assert resposta.json()["lente"] == "ROTEIRO_DE_VIRADA"
     assert len(resposta.json()["filmes"]) == 32
     assert all(75 <= filme["match_percentual"] <= 99 for filme in resposta.json()["filmes"])
     matches = [filme["match_percentual"] for filme in resposta.json()["filmes"]]
     assert matches == sorted(matches, reverse=True)
-    assert atualizado.status_code == 200
+    assert historico.status_code == 200
     with client.app.state.test_session() as db:
         usuario_atual = db.get(Usuario, usuario["id"])
         assert usuario_atual.lente_atual == Lente.ROTEIRO_DE_VIRADA

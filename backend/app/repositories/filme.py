@@ -9,9 +9,13 @@ def obter_por_id(db: Session, filme_id: int) -> Filme | None:
 
 
 def listar(db: Session, q: str | None = None) -> list[Filme]:
-    consulta = select(Filme)
-    termo = q.strip() if q else ""
-    if termo:
-        padrao = f"%{termo}%"
-        consulta = consulta.where(Filme.titulo.ilike(padrao) | Filme.diretor.ilike(padrao))
-    return list(db.scalars(consulta.order_by(Filme.titulo)).all())
+    consulta = select(Filme).order_by(Filme.titulo)
+    filmes = list(db.scalars(consulta).all())
+    termo = q.strip().casefold() if q else ""
+    if not termo:
+        return filmes
+    return [
+        filme
+        for filme in filmes
+        if termo in filme.titulo.casefold() or termo in filme.diretor.casefold()
+    ]
