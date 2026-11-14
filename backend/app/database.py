@@ -4,6 +4,7 @@ from typing import Generator
 
 from dotenv import load_dotenv
 from sqlalchemy import create_engine, event
+from sqlalchemy.engine import Engine
 from sqlalchemy.orm import Session, sessionmaker
 
 from .models import Base
@@ -17,12 +18,16 @@ engine = create_engine(DATABASE_URL, **ENGINE_OPTIONS)
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 
 
-if DATABASE_URL.startswith("sqlite"):
-    @event.listens_for(engine, "connect")
-    def ativar_chaves_estrangeiras(connection, record) -> None:
+def configurar_chaves_estrangeiras(db_engine: Engine) -> None:
+    @event.listens_for(db_engine, "connect")
+    def ativar_chaves_estrangeiras(connection, _record) -> None:
         cursor = connection.cursor()
         cursor.execute("PRAGMA foreign_keys=ON")
         cursor.close()
+
+
+if DATABASE_URL.startswith("sqlite"):
+    configurar_chaves_estrangeiras(engine)
 
 
 def get_db() -> Generator[Session, None, None]:
