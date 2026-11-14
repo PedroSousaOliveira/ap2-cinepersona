@@ -1,5 +1,5 @@
 # Escopo CinePersona (entrega e apresentação em 16/11)
-Prevalece sobre docs/BRIEFING_ORIGINAL.md onde divergir. O projeto Android fica em android/ (se for outra pasta, usar o nome real).
+Prevalece sobre docs/BRIEFING_ORIGINAL.md onde divergir. O módulo Android fica em app/.
 ## Prioridade
 Funcionar ao vivo > requisitos do enunciado > extras. Se atrasar, cortar nesta ordem: busca no catálogo, testes Android, polimento visual. Requisito do enunciado nunca se corta.
 ## Requisitos do enunciado
