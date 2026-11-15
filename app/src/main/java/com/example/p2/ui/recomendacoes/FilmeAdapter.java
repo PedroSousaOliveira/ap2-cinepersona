@@ -57,7 +57,8 @@ public class FilmeAdapter extends RecyclerView.Adapter<FilmeAdapter.FilmeViewHol
             binding.imageLenteItem.setImageResource(LenteIcone.drawable(filme.getLenteAlvo()));
             binding.textTituloItem.setText(filme.getTitulo());
             binding.textAnoDiretor.setText(binding.getRoot().getContext()
-                    .getString(R.string.filme_ano_diretor, filme.getAno(), filme.getDiretor()));
+                    .getString(R.string.filme_ficha,
+                            filme.getAno(), filme.getDiretor(), filme.getGenero()));
             binding.textSeloCult.setVisibility(filme.isCult() ? View.VISIBLE : View.GONE);
             if (filme.getMatchPercentual() != null) {
                 binding.textMatchItem.setText(binding.getRoot().getContext()

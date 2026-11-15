@@ -50,7 +50,7 @@ public class DetalhesFilmeActivity extends AppCompatActivity {
     private void preencherFicha() {
         binding.imageLenteDetalhes.setImageResource(LenteIcone.drawable(filme.getLenteAlvo()));
         binding.textTitulo.setText(filme.getTitulo());
-        binding.textFicha.setText(getString(R.string.detalhes_ficha,
+        binding.textFicha.setText(getString(R.string.filme_ficha,
                 filme.getAno(), filme.getDiretor(), filme.getGenero()));
         binding.textSinopse.setText(filme.getSinopse());
         binding.textMotivo.setText(filme.getMotivoReconhecimento());
