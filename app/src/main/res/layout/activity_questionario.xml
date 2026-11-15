@@ -1,16 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/cine_background"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="@dimen/screen_padding">
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/questionario_title"
-        android:textColor="@color/cine_text"
-        android:textSize="24sp" />
-</LinearLayout>
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
+
+        <TextView
+            android:id="@+id/textQuestionnaireTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/questionario_title"
+            android:textColor="@color/cine_text"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textGreeting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/cine_text_secondary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/questionario_momento_label"
+            android:textColor="@color/cine_text"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/groupMomento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioMomento0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/cine_green"
+                android:text="@string/questionario_momento_roteiro"
+                android:textColor="@color/cine_text" />
+
+            <RadioButton
+                android:id="@+id/radioMomento1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/cine_green"
+                android:text="@string/questionario_momento_afetivo"
+                android:textColor="@color/cine_text" />
+
+            <RadioButton
+                android:id="@+id/radioMomento2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/cine_green"
+                android:text="@string/questionario_momento_adrenalina"
+                android:textColor="@color/cine_text" />
+
+            <RadioButton
+                android:id="@+id/radioMomento3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/cine_green"
+                android:text="@string/questionario_momento_fora_de_quadro"
+                android:textColor="@color/cine_text" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/questionario_clima_label"
+            android:textColor="@color/cine_text"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerClima"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:entries="@array/questionario_climas"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/questionario_prioridades_label"
+            android:textColor="@color/cine_text"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkPrioridade0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/cine_green"
+            android:text="@string/questionario_prioridade_roteiro"
+            android:textColor="@color/cine_text" />
+
+        <CheckBox
+            android:id="@+id/checkPrioridade1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/cine_green"
+            android:text="@string/questionario_prioridade_afetivo"
+            android:textColor="@color/cine_text" />
+
+        <CheckBox
+            android:id="@+id/checkPrioridade2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/cine_green"
+            android:text="@string/questionario_prioridade_adrenalina"
+            android:textColor="@color/cine_text" />
+
+        <CheckBox
+            android:id="@+id/checkPrioridade3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/cine_green"
+            android:text="@string/questionario_prioridade_fora_de_quadro"
+            android:textColor="@color/cine_text" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchLadoB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/questionario_lado_b"
+            android:textColor="@color/cine_text"
+            app:thumbTint="@color/cine_green" />
+
+        <Button
+            android:id="@+id/buttonRecomendar"
+            style="@style/Widget.CinePersona.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:enabled="false"
+            android:text="@string/questionario_enviar" />
+
+        <ProgressBar
+            android:id="@+id/progressQuestionario"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>
