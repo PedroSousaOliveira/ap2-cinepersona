@@ -11,13 +11,15 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="12dp">
+        android:padding="16dp">
 
         <ImageView
             android:id="@+id/imageLenteItem"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:contentDescription="@string/recomendacoes_lente_icone" />
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_icone_lente"
+            android:contentDescription="@string/recomendacoes_lente_icone"
+            android:padding="8dp" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -46,7 +48,12 @@
                 android:id="@+id/textSeloCult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_chip_laranja"
+                android:paddingStart="10dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="3dp"
                 android:text="@string/filme_selo_cult"
                 android:textColor="@color/cine_orange"
                 android:textSize="12sp"
@@ -59,8 +66,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
+            android:background="@drawable/bg_chip_verde"
+            android:paddingStart="12dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="5dp"
             android:textColor="@color/cine_green"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

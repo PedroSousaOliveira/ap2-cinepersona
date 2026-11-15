@@ -1,17 +1,34 @@
 <resources>
     <style name="Widget.CinePersona.Button" parent="Widget.Material3.Button">
-        <item name="backgroundTint">@color/cine_green</item>
+        <item name="backgroundTint">@color/botao_fundo</item>
         <item name="android:textColor">@color/cine_background</item>
-        <item name="cornerRadius">12dp</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
     <style name="Widget.CinePersona.EditText" parent="Widget.Material3.TextInputEditText.OutlinedBox">
         <item name="android:textColor">@color/cine_text</item>
         <item name="android:textColorHint">@color/cine_text_secondary</item>
+        <item name="android:background">@drawable/bg_campo</item>
+        <item name="android:padding">16dp</item>
     </style>
     <style name="Widget.CinePersona.ButtonSecundario" parent="Widget.Material3.Button.OutlinedButton">
         <item name="android:textColor">@color/cine_green</item>
         <item name="strokeColor">@color/cine_green</item>
-        <item name="cornerRadius">12dp</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="TextAppearance.CinePersona.Titulo" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textColor">@color/cine_text</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.CinePersona.Rotulo" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">@color/cine_text</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
     <style name="Widget.CinePersona.Card" parent="Widget.MaterialComponents.CardView">
         <item name="cardBackgroundColor">@color/cine_surface</item>

@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="20dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -30,9 +30,11 @@
 
                     <ImageView
                         android:id="@+id/imageLenteDetalhes"
-                        android:layout_width="56dp"
-                        android:layout_height="56dp"
-                        android:contentDescription="@string/recomendacoes_lente_icone" />
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/bg_icone_lente"
+                        android:contentDescription="@string/recomendacoes_lente_icone"
+                        android:padding="12dp" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -46,7 +48,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textColor="@color/cine_text"
-                            android:textSize="20sp"
+                            android:textSize="24sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -61,9 +63,14 @@
                             android:id="@+id/textMatch"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/bg_chip_verde"
+                            android:paddingStart="12dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="12dp"
+                            android:paddingBottom="5dp"
                             android:textColor="@color/cine_green"
-                            android:textSize="16sp"
+                            android:textSize="15sp"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>

@@ -11,8 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/recomendacoes_title"
-        android:textColor="@color/cine_text"
-        android:textSize="24sp" />
+        android:textAppearance="@style/TextAppearance.CinePersona.Titulo" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardLente"
@@ -26,13 +25,15 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:padding="16dp">
+            android:padding="20dp">
 
             <ImageView
                 android:id="@+id/imageLente"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
-                android:contentDescription="@string/recomendacoes_lente_icone" />
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/bg_icone_lente"
+                android:contentDescription="@string/recomendacoes_lente_icone"
+                android:padding="12dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -45,7 +46,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/cine_green"
-                    android:textSize="18sp"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -65,16 +66,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:textColor="@color/cine_text"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:textStyle="bold" />
 
     <ProgressBar
         android:id="@+id/progressReconhecimento"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="12dp"
         android:layout_marginTop="8dp"
         android:max="100"
-        android:progressTint="@color/cine_green" />
+        android:progressDrawable="@drawable/progress_arredondado" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerFilmes"

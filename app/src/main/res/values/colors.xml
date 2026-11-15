@@ -8,4 +8,6 @@
     <color name="cine_orange">#FF8000</color>
     <color name="cine_text">#FFFFFFFF</color>
     <color name="cine_text_secondary">#FFB8C0C8</color>
+    <color name="cine_green_soft">#3300E054</color>
+    <color name="cine_orange_soft">#33FF8000</color>
 </resources>
