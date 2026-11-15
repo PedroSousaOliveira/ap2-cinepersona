@@ -33,7 +33,36 @@
         <item>Criativo/Surpreendente</item>
     </string-array>
     <string name="recomendacoes_title">Sua recomendação</string>
+    <string name="recomendacoes_lente_icone">Ícone da lente</string>
+    <string name="recomendacoes_reconhecimento">Reconhecimento: %1$d%%</string>
+    <string name="recomendacoes_meu_diario">Meu diário</string>
+    <string name="recomendacoes_vazio">Nenhum filme recomendado desta vez.</string>
+    <string name="filme_ano_diretor">%1$d • %2$s</string>
+    <string name="filme_match">%1$d%%</string>
+    <string name="filme_selo_cult">Cult</string>
     <string name="detalhes_filme_title">Detalhes do filme</string>
+    <string name="detalhes_ficha">%1$d • %2$s • %3$s</string>
+    <string name="detalhes_match">Match: %1$d%%</string>
+    <string name="detalhes_sinopse_label">Sinopse</string>
+    <string name="detalhes_motivo_label">Por que combina com você</string>
+    <string name="detalhes_nota_label">Sua nota</string>
+    <string name="detalhes_resenha_hint">Resenha (opcional)</string>
+    <string name="detalhes_salvar">Salvar no diário</string>
+    <string name="detalhes_compartilhar">Compartilhar</string>
+    <string name="detalhes_trailer">Ver trailer</string>
+    <string name="detalhes_salvo">Avaliação salva no seu diário.</string>
+    <string name="detalhes_ja_avaliado">Você já avaliou este filme.</string>
+    <string name="detalhes_abrir_diario">Abrir diário</string>
+    <string name="detalhes_erro_fallback">Não foi possível salvar a avaliação. Tente novamente.</string>
+    <string name="detalhes_sem_app_compartilhar">Nenhum aplicativo disponível para compartilhar.</string>
+    <string name="detalhes_sem_app_trailer">Nenhum aplicativo disponível para abrir o trailer.</string>
+    <string-array name="detalhes_notas">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
     <string name="perfil_diario_title">Meu diário</string>
     <string name="lente_roteiro_de_virada">Roteiro de Virada</string>
     <string name="lente_plano_sequencia_afetivo">Plano-Sequência Afetivo</string>

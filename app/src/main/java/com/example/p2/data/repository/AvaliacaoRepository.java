@@ -90,7 +90,8 @@ public class AvaliacaoRepository {
         if (resposta.isSuccessful()) {
             estado.postValue(Resultado.sucesso(resposta.body()));
         } else {
-            estado.postValue(Resultado.erro(ApiErrorParser.extrairDetail(resposta.errorBody())));
+            estado.postValue(Resultado.erro(
+                    ApiErrorParser.extrairDetail(resposta.errorBody()), resposta.code()));
         }
     }
 }
