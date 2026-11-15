@@ -11,6 +11,8 @@ import com.example.p2.domain.model.AvaliacaoAtualizarRequest;
 import com.example.p2.domain.model.AvaliacaoRequest;
 import com.example.p2.util.Resultado;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -24,6 +26,28 @@ public class AvaliacaoRepository {
 
     public AvaliacaoRepository(ApiService apiService) {
         this.apiService = apiService;
+    }
+
+    public LiveData<Resultado<List<Avaliacao>>> listarPorUsuario(int usuarioId) {
+        MutableLiveData<Resultado<List<Avaliacao>>> estado = new MutableLiveData<>();
+        estado.setValue(Resultado.carregando());
+        apiService.listarAvaliacoes(usuarioId).enqueue(new Callback<List<Avaliacao>>() {
+            @Override
+            public void onResponse(Call<List<Avaliacao>> call, Response<List<Avaliacao>> resposta) {
+                if (resposta.isSuccessful()) {
+                    estado.postValue(Resultado.sucesso(resposta.body()));
+                } else {
+                    estado.postValue(Resultado.erro(
+                            ApiErrorParser.extrairDetail(resposta.errorBody()), resposta.code()));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Avaliacao>> call, Throwable erro) {
+                estado.postValue(Resultado.erro(erro.getMessage()));
+            }
+        });
+        return estado;
     }
 
     public LiveData<Resultado<Avaliacao>> criar(AvaliacaoRequest request) {

@@ -64,6 +64,20 @@
         <item>5</item>
     </string-array>
     <string name="perfil_diario_title">Meu diário</string>
+    <string name="perfil_vazio">Seu diário ainda não tem avaliações.</string>
+    <string name="perfil_nota">%1$d/5</string>
+    <string name="perfil_editar">Editar</string>
+    <string name="perfil_excluir">Excluir</string>
+    <string name="perfil_editar_titulo">Editar avaliação</string>
+    <string name="perfil_excluir_titulo">Excluir avaliação</string>
+    <string name="perfil_excluir_mensagem">Remover \"%1$s\" do seu diário?</string>
+    <string name="perfil_salvar">Salvar</string>
+    <string name="perfil_cancelar">Cancelar</string>
+    <string name="perfil_atualizada">Avaliação atualizada.</string>
+    <string name="perfil_excluida">Avaliação excluída.</string>
+    <string name="perfil_erro_carregar">Não foi possível carregar o diário.</string>
+    <string name="perfil_erro_operacao">Não foi possível concluir a ação. Tente novamente.</string>
+    <string name="perfil_tentar_novamente">Tentar novamente</string>
     <string name="lente_roteiro_de_virada">Roteiro de Virada</string>
     <string name="lente_plano_sequencia_afetivo">Plano-Sequência Afetivo</string>
     <string name="lente_corte_seco_adrenalina">Corte Seco &amp; Adrenalina</string>
