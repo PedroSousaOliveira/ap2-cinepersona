@@ -51,7 +51,7 @@ def test_get_filmes_busca_titulo_e_diretor_sem_diferenciar_caixa(client):
     assert len(por_diretor.json()) == 3
 
 
-def test_post_recomendar_grava_lente_e_devolve_catalogo(client):
+def test_post_recomendar_grava_lente_e_devolve_filmes_da_lente(client):
     usuario = criar_usuario(client)
     resposta = client.post(
         "/recomendar",
@@ -66,7 +66,10 @@ def test_post_recomendar_grava_lente_e_devolve_catalogo(client):
     historico = client.get(f"/usuarios/{usuario['id']}/avaliacoes")
     assert resposta.status_code == 200
     assert resposta.json()["lente"] == "ROTEIRO_DE_VIRADA"
-    assert len(resposta.json()["filmes"]) == 32
+    assert len(resposta.json()["filmes"]) == 8
+    assert all(
+        filme["lente_alvo"] == "ROTEIRO_DE_VIRADA" for filme in resposta.json()["filmes"]
+    )
     assert all(75 <= filme["match_percentual"] <= 99 for filme in resposta.json()["filmes"])
     matches = [filme["match_percentual"] for filme in resposta.json()["filmes"]]
     assert matches == sorted(matches, reverse=True)

@@ -63,7 +63,7 @@ def recomendar(db: Session, req: RecomendarEntrada) -> RecomendacaoSaida:
     pontuacoes = calcular_pontuacao(req.momento, req.clima, req.prioridades)
     lente = escolher_lente(pontuacoes, req.momento)
     usuario_repository.atualizar_lente_atual(db, usuario, lente)
-    filmes = _filmes_ordenados(db, pontuacoes, req.modo_lado_b)
+    filmes = _filmes_ordenados(db, lente, pontuacoes[lente], req.modo_lado_b)
     return RecomendacaoSaida(
         lente=lente,
         nome_lente=NOMES_LENTES[lente],
@@ -74,11 +74,13 @@ def recomendar(db: Session, req: RecomendarEntrada) -> RecomendacaoSaida:
 
 
 def _filmes_ordenados(
-    db: Session, pontuacoes: dict[Lente, int], modo_lado_b: bool
+    db: Session, lente: Lente, pontuacao: int, modo_lado_b: bool
 ) -> list[FilmeRecomendadoSaida]:
     recomendacoes = []
     for filme in filme_repository.listar(db):
-        match = calcular_match(pontuacoes[filme.lente_alvo], filme.is_cult, modo_lado_b)
+        if filme.lente_alvo != lente:
+            continue
+        match = calcular_match(pontuacao, filme.is_cult, modo_lado_b)
         dados = FilmeSaida.model_validate(filme).model_dump()
         recomendacoes.append(FilmeRecomendadoSaida(**dados, match_percentual=match))
     return sorted(recomendacoes, key=lambda filme: (-filme.match_percentual, filme.titulo))
