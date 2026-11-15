@@ -36,7 +36,7 @@
             android:autofillHints="name"
             android:hint="@string/login_name_hint"
             android:inputType="textPersonName"
-            android:singleLine="true" />
+            android:maxLines="1" />
 
         <EditText
             android:id="@+id/editEmail"
@@ -47,7 +47,7 @@
             android:autofillHints="emailAddress"
             android:hint="@string/login_email_hint"
             android:inputType="textEmailAddress"
-            android:singleLine="true" />
+            android:maxLines="1" />
 
         <Button
             android:id="@+id/buttonEntrar"

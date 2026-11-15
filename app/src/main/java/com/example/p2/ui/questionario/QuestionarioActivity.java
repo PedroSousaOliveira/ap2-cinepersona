@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.p2.R;
 import com.example.p2.databinding.ActivityQuestionarioBinding;
 import com.example.p2.domain.model.Lente;
 import com.example.p2.domain.model.RecomendacaoRequest;
@@ -35,7 +36,7 @@ public class QuestionarioActivity extends AppCompatActivity {
         viewModel = new ViewModelProvider(this).get(QuestionarioViewModel.class);
         usuarioId = getIntent().getIntExtra(Extras.USUARIO_ID, -1);
         String nome = getIntent().getStringExtra(Extras.NOME);
-        binding.textGreeting.setText(getString(com.example.p2.R.string.questionario_greeting, nome));
+        binding.textGreeting.setText(getString(R.string.questionario_greeting, nome));
         configurarFormulario();
         viewModel.getEstado().observe(this, this::mostrarResultado);
     }
@@ -140,7 +141,7 @@ public class QuestionarioActivity extends AppCompatActivity {
         atualizarBotao();
         binding.progressQuestionario.setVisibility(View.GONE);
         String texto = mensagem == null || mensagem.trim().isEmpty()
-                ? getString(com.example.p2.R.string.questionario_error_fallback) : mensagem;
+                ? getString(R.string.questionario_error_fallback) : mensagem;
         Snackbar.make(binding.getRoot(), texto, Snackbar.LENGTH_LONG).show();
     }
 

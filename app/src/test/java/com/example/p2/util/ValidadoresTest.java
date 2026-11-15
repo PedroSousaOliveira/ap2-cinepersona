@@ -23,11 +23,4 @@ public class ValidadoresTest {
         assertFalse(Validadores.emailValido(null));
     }
 
-    @Test
-    public void validaNotaEntreUmECinco() {
-        assertTrue(Validadores.notaValida(1));
-        assertTrue(Validadores.notaValida(5));
-        assertFalse(Validadores.notaValida(0));
-        assertFalse(Validadores.notaValida(6));
-    }
 }

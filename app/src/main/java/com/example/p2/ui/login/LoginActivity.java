@@ -1,11 +1,13 @@
 package com.example.p2.ui.login;
 
-import android.os.Bundle;
 import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.p2.R;
 import com.example.p2.databinding.ActivityLoginBinding;
 import com.example.p2.domain.model.Usuario;
 import com.example.p2.util.Extras;
@@ -34,10 +36,10 @@ public class LoginActivity extends AppCompatActivity {
         binding.editNome.setError(null);
         binding.editEmail.setError(null);
         if (!Validadores.nomeValido(nome)) {
-            binding.editNome.setError(getString(com.example.p2.R.string.login_name_required));
+            binding.editNome.setError(getString(R.string.login_name_required));
         }
         if (!Validadores.emailValido(email)) {
-            binding.editEmail.setError(getString(com.example.p2.R.string.login_email_invalid));
+            binding.editEmail.setError(getString(R.string.login_email_invalid));
         }
         if (Validadores.nomeValido(nome) && Validadores.emailValido(email)) {
             viewModel.entrar(nome, email);
@@ -49,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
         boolean carregando = resultado.getEstado() == Resultado.Estado.CARREGANDO;
-        binding.progressLogin.setVisibility(carregando ? android.view.View.VISIBLE : android.view.View.GONE);
+        binding.progressLogin.setVisibility(carregando ? View.VISIBLE : View.GONE);
         binding.buttonEntrar.setEnabled(!carregando);
         if (resultado.getEstado() == Resultado.Estado.SUCESSO) {
             abrirQuestionario(resultado.getValor());
@@ -72,10 +74,10 @@ public class LoginActivity extends AppCompatActivity {
 
     private void mostrarErro(String mensagem) {
         viewModel.limparEstado();
-        binding.progressLogin.setVisibility(android.view.View.GONE);
+        binding.progressLogin.setVisibility(View.GONE);
         binding.buttonEntrar.setEnabled(true);
         String texto = mensagem == null || mensagem.trim().isEmpty()
-                ? getString(com.example.p2.R.string.login_error_fallback) : mensagem;
+                ? getString(R.string.login_error_fallback) : mensagem;
         Snackbar.make(binding.getRoot(), texto, Snackbar.LENGTH_LONG).show();
     }
 }

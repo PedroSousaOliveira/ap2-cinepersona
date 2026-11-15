@@ -16,8 +16,4 @@ public final class Validadores {
         return email != null && email.trim().length() <= 254
                 && EMAIL.matcher(email.trim()).matches();
     }
-
-    public static boolean notaValida(int nota) {
-        return nota >= 1 && nota <= 5;
-    }
 }
