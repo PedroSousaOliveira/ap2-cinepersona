@@ -7,4 +7,4 @@ Fonte da verdade: docs/ESCOPO.md (prevalece), docs/REGRAS.md e docs/BRIEFING_ORI
 - Commits só quando eu pedir: um assunto por commit, Conventional Commits em português, até 72 caracteres. Nunca faça push. Antes de commitar, mostre `git status --short` e confirme que não há arquivos gerados, segredos nem local.properties.
 - Nunca altere local.properties. Sem mudanças fora do que a fase pede. Se o pedido divergir do ESCOPO, pare e pergunte.
 ## Estado
-Backend completo com testes. Android: base + Fase 4 (Login e Questionário) e Fase 5 (Recomendações e Detalhes) concluídas, commitadas e com push. Faltam: celular físico (bônus), Fase 6 (Diário), teste manual completo no emulador, refatoração, README, auditoria.
+Backend completo com testes (recomendações filtradas pela lente vencedora). Android: Fases 4, 5 e 6 concluídas, testadas no emulador e com visual final (cards/chips). README com screenshots pronto; vídeo de backup na área de trabalho. Faltam: celular físico (bônus), refatoração e auditoria final.
