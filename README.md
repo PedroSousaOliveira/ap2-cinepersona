@@ -74,7 +74,9 @@ Celular físico (cabo USB):
 O backend continua o mesmo e não precisa ser desligado: emulador e celular usam a mesma API ao mesmo tempo. O celular chega até ela por um túnel USB criado pelo `adb reverse`.
 
 1. No `local.properties` da raiz do projeto, adicione a linha `api.baseUrl=http://localhost:8000/`, clique em Sync e instale o app pelo Run com o celular selecionado. Basta fazer isso uma vez: o app fica instalado no aparelho.
-2. No celular, ative a depuração USB (Opções do desenvolvedor), conecte o cabo e aceite o aviso "Permitir depuração USB?".
+2. No celular, ative a depuração USB (Opções do desenvolvedor), conecte o cabo e aceite o aviso "Permitir depuração USB?". No Windows, o computador pode precisar do driver USB do fabricante para reconhecer o aparelho (a instalação exige permissão de administrador):
+   - Samsung: https://developer.samsung.com/android-usb-driver
+   - Outros fabricantes: https://developer.android.com/studio/run/oem-usb
 3. Em um PowerShell, com o backend ligado:
 
 ```powershell
@@ -107,7 +109,7 @@ Problemas comuns:
 | App no celular: "failed to connect to localhost" | o túnel não existe: repita o `reverse` com `-d` e confira com `reverse --list` |
 | `more than one device/emulator` | faltou o `-d` no comando |
 | `no devices found` com `-d` | o celular não está conectado por cabo ou não autorizou a depuração |
-| Celular não aparece em `adb devices` | troque o cabo ou a porta USB, aceite o aviso no celular e instale o driver USB do fabricante |
+| Celular não aparece em `adb devices` | troque o cabo ou a porta USB, aceite o aviso no celular e instale o driver USB do fabricante (links no passo 2 acima) |
 | `unauthorized` em `adb devices` | aceite o aviso "Permitir depuração USB?" no celular |
 | `[Errno 10048]` ao ligar o backend | já existe um backend usando a porta 8000: use-o ou feche a janela antiga |
 
