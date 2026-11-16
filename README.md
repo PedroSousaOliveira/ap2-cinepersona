@@ -69,12 +69,45 @@ Emulador:
 2. Suba o backend como descrito acima.
 3. Clique em Run com um emulador selecionado. O app usa `http://10.0.2.2:8000/` por padrão, que é o endereço do PC visto de dentro do emulador.
 
-Celular físico:
+Celular físico (cabo USB):
 
-1. Adicione ao `local.properties` a linha `api.baseUrl=http://localhost:8000/` e recompile.
-2. Ative a depuração USB no aparelho e conecte o cabo.
-3. Rode `adb reverse tcp:8000 tcp:8000` e instale o app pelo Run. O comando precisa ser repetido se o aparelho for reconectado.
-4. Para voltar ao emulador, remova a linha do `local.properties` e recompile.
+O backend continua o mesmo e não precisa ser desligado: emulador e celular usam a mesma API ao mesmo tempo. O celular chega até ela por um túnel USB criado pelo `adb reverse`.
+
+1. No `local.properties` da raiz do projeto, adicione a linha `api.baseUrl=http://localhost:8000/`, clique em Sync e instale o app pelo Run com o celular selecionado. Basta fazer isso uma vez: o app fica instalado no aparelho.
+2. No celular, ative a depuração USB (Opções do desenvolvedor), conecte o cabo e aceite o aviso "Permitir depuração USB?".
+3. Em um PowerShell, com o backend ligado:
+
+```powershell
+$adb = "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe"
+& $adb devices
+& $adb -s NUMERO_DE_SERIE reverse tcp:8000 tcp:8000
+& $adb -s NUMERO_DE_SERIE reverse --list
+```
+
+- `adb devices` lista os aparelhos. O `NUMERO_DE_SERIE` do celular é a primeira coluna da linha dele (o emulador aparece como `emulator-5554`).
+- `-s NUMERO_DE_SERIE` indica com qual aparelho falar. Sem ele, com emulador e celular conectados, o comando falha com `more than one device/emulator` e o túnel não é criado.
+- `reverse --list` deve mostrar `tcp:8000 tcp:8000`.
+
+4. Abra o app no celular.
+
+O túnel some quando o cabo é desconectado; nesse caso, repita o comando `reverse`. Para voltar a gerar o app para o emulador, remova a linha do `local.properties` e recompile.
+
+Celular físico (Wi-Fi, sem cabo, com computador e celular no mesmo roteador):
+
+1. No celular: Opções do desenvolvedor → Depuração por Wi-Fi → ativar → "Parear dispositivo com código de pareamento".
+2. `& $adb pair IP:PORTA_DE_PAREAMENTO` e digite o código de 6 dígitos mostrado no celular (uma vez por computador).
+3. `& $adb connect IP:PORTA` com o endereço da tela principal da Depuração por Wi-Fi (a porta muda a cada vez que a opção é religada).
+4. Siga do passo 3 da seção do cabo, usando `IP:PORTA` como número de série.
+
+Problemas comuns:
+
+| Sintoma | Solução |
+| --- | --- |
+| App no celular: "failed to connect to localhost" | o túnel não existe: repita o `reverse` com `-s` e confira com `reverse --list` |
+| `more than one device/emulator` | use `-s NUMERO_DE_SERIE` ou feche o emulador |
+| Celular não aparece em `adb devices` | troque o cabo ou a porta USB, aceite o aviso no celular e instale o driver USB do fabricante |
+| `unauthorized` em `adb devices` | aceite o aviso "Permitir depuração USB?" no celular |
+| `[Errno 10048]` ao ligar o backend | já existe um backend usando a porta 8000: use-o ou feche a janela antiga |
 
 Testes do Android:
 
