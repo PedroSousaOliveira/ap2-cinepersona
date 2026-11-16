@@ -80,13 +80,14 @@ O backend continua o mesmo e não precisa ser desligado: emulador e celular usam
 ```powershell
 $adb = "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe"
 & $adb devices
-& $adb -s NUMERO_DE_SERIE reverse tcp:8000 tcp:8000
-& $adb -s NUMERO_DE_SERIE reverse --list
+& $adb -d reverse tcp:8000 tcp:8000
+& $adb -d reverse --list
 ```
 
-- `adb devices` lista os aparelhos. O `NUMERO_DE_SERIE` do celular é a primeira coluna da linha dele (o emulador aparece como `emulator-5554`).
-- `-s NUMERO_DE_SERIE` indica com qual aparelho falar. Sem ele, com emulador e celular conectados, o comando falha com `more than one device/emulator` e o túnel não é criado.
+- `adb devices` lista os aparelhos (o emulador aparece como `emulator-5554`).
+- `-d` indica o aparelho conectado por cabo USB, então o comando funciona mesmo com o emulador aberto. Sem ele, com os dois conectados, o comando falha com `more than one device/emulator` e o túnel não é criado.
 - `reverse --list` deve mostrar `tcp:8000 tcp:8000`.
+- Não use o Run com o celular selecionado: um clone novo gera o app com `10.0.2.2`, que só funciona no emulador. Abra o app já instalado no celular.
 
 4. Abra o app no celular.
 
@@ -97,14 +98,15 @@ Celular físico (Wi-Fi, sem cabo, com computador e celular no mesmo roteador):
 1. No celular: Opções do desenvolvedor → Depuração por Wi-Fi → ativar → "Parear dispositivo com código de pareamento".
 2. `& $adb pair IP:PORTA_DE_PAREAMENTO` e digite o código de 6 dígitos mostrado no celular (uma vez por computador).
 3. `& $adb connect IP:PORTA` com o endereço da tela principal da Depuração por Wi-Fi (a porta muda a cada vez que a opção é religada).
-4. Siga do passo 3 da seção do cabo, usando `IP:PORTA` como número de série.
+4. Siga do passo 3 da seção do cabo, trocando `-d` por `-s IP:PORTA`.
 
 Problemas comuns:
 
 | Sintoma | Solução |
 | --- | --- |
-| App no celular: "failed to connect to localhost" | o túnel não existe: repita o `reverse` com `-s` e confira com `reverse --list` |
-| `more than one device/emulator` | use `-s NUMERO_DE_SERIE` ou feche o emulador |
+| App no celular: "failed to connect to localhost" | o túnel não existe: repita o `reverse` com `-d` e confira com `reverse --list` |
+| `more than one device/emulator` | faltou o `-d` no comando |
+| `no devices found` com `-d` | o celular não está conectado por cabo ou não autorizou a depuração |
 | Celular não aparece em `adb devices` | troque o cabo ou a porta USB, aceite o aviso no celular e instale o driver USB do fabricante |
 | `unauthorized` em `adb devices` | aceite o aviso "Permitir depuração USB?" no celular |
 | `[Errno 10048]` ao ligar o backend | já existe um backend usando a porta 8000: use-o ou feche a janela antiga |
